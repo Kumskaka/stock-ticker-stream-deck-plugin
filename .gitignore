@@ -1,3 +1,5 @@
 sdplugin-stocks
 sdplugin-stocks.exe
 .DS_Store
+.idea
+*.iml

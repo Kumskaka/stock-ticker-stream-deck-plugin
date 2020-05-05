@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/exension/go-streamdeck-sdk"
+	"github.com/plang1997/go-streamdeck-sdk"
 	"github.com/gorilla/websocket"
 )
 
@@ -201,4 +201,19 @@ func (p plugin) OnApplicationDidLaunch(*streamdeck.EvApplication) {
 
 func (p plugin) OnApplicationDidTerminate(*streamdeck.EvApplication) {
 
+}
+
+func (p plugin) OnKeyDown(application *streamdeck.EvKeyDown) {
+
+}
+
+func (p plugin) OnKeyUp(ev *streamdeck.EvKeyUp) {
+	if t, ok := p.tiles[ev.Context]; ok {
+		stock := t.symbol
+		url := "https://finance.yahoo.com/quote/" + stock
+		err := p.sd.OpenUrl(ev.Context, url)
+		if err != nil {
+			log.Fatalf("openUrl: %v url: %s", err, url)
+		}
+	}
 }

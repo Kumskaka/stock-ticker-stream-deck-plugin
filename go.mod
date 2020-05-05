@@ -6,6 +6,7 @@ require (
 	github.com/exension/go-streamdeck-sdk v0.0.0-20190626182848-2c0344c59b5b
 	github.com/golang/freetype v0.0.0-20170609003504-e2365dfdc4a0
 	github.com/gorilla/websocket v1.4.2
+	github.com/plang1997/go-streamdeck-sdk v0.0.0-20200505194554-918731887d33
 	github.com/yuin/goldmark v1.1.30 // indirect
 	golang.org/x/crypto v0.0.0-20200429183012-4b2356b1ed79 // indirect
 	golang.org/x/image v0.0.0-20200430140353-33d19683fad8
